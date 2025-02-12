@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useNews } from "../../hooks/useNews";
-import SearchBar from "../../components/SearchBar";
-import NewsCard from "../../components/NewsCard";
-import Pagination from "../../components/Pagination";
+import { SearchBar } from "../../components/SearchBar";
+import { NewsCard } from "../../components/NewsCard";
+import { Pagination } from "../../components/Pagination";
 
 export const SearchPage = () => {
   const navigate = useNavigate(); //페이지 이동을 위해
