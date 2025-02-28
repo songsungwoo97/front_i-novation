@@ -1,4 +1,4 @@
-import { useState, useEffect, use } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { NewsCard } from "../components/NewsCard";
 import { useNews } from "../hooks/useNews";
@@ -48,7 +48,7 @@ export const PopularPage = () => {
 
         {/* 뉴스 목록 */}
         <div className="space-y-4">
-          {popularNews.map((news) => (
+          {results.map((news) => (
             <NewsCard
               key={news.id}
               title={news.title}
@@ -60,7 +60,7 @@ export const PopularPage = () => {
         </div>
 
         {/* 뉴스가 없을 때 */}
-        {!loading && !error && popularNews.length === 0 && (
+        {!loading && !error && results.length === 0 && (
           <div className="text-center py-4 text-gray-500">
             인기 뉴스가 없습니다.
           </div>

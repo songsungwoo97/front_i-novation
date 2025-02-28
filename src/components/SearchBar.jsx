@@ -1,7 +1,6 @@
-import React from "react";
 import PropTypes from "prop-types";
 
-export const Searchbar = ({ value, onChange, onSubmit }) => {
+export const SearchBar = ({ value, onChange, onSubmit }) => {
   return (
     <form onSubmit={onSubmit} className="flex gap-2">
       <input
@@ -22,7 +21,7 @@ export const Searchbar = ({ value, onChange, onSubmit }) => {
   );
 };
 
-Searchbar.propTypes = {
+SearchBar.propTypes = {
   value: PropTypes.string,
   onChange: PropTypes.func,
   onSubmit: PropTypes.func,
